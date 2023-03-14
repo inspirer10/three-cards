@@ -1,0 +1,113 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+@import "styles/normalize.scss";
+@import "styles/root.scss";
+@import "styles/fonts.scss";
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards__section {
+    display: flex;
+    justify-content: center;
+    .card {
+        border-radius: 12px;
+        width: 368px;
+        height: auto;
+        margin: 0 8px;
+        padding: 32px;
+        box-shadow: 0px 0px 35.5252px rgba(0, 0, 0, 0.06);
+        h2 {
+            margin: 24px 0 16px;
+            font-size: 32px;
+            text-align: left;
+        }
+        p {
+            line-height: 140%;
+            color: #141414;
+            text-align: justify;
+        }
+        a {
+            text-decoration: none;
+            button {
+                cursor: pointer;
+                margin-top: 24px;
+                background-color: white;
+                border-radius: 100px;
+                padding: 14px 19px 15px 24px;
+                outline: none;
+                border: none;
+                font-size: 14px;
+                line-height: 18px;
+                display: flex;
+                svg {
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+    .card:first-of-type {
+        background-color: #E5EFE2;
+    }
+    .card:nth-of-type(2) {
+        background-color: #E4E9F3;
+    }
+    .card:nth-of-type(3) {
+        background-color: #F4F1E4;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    body {
+        height: auto;
+    }
+    .cards__section {
+        flex-direction: column;
+        .card {
+            width: 752px;
+            margin: 8px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .cards__section {
+        .card {
+            width: 640px;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .cards__section {
+        .card {
+            width: 570px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) and (orientation: portrait) {
+    .cards__section {
+        .card {
+            width: 440px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+    .cards__section {
+        .card {
+            width: 330px;
+        }
+    }
+}
